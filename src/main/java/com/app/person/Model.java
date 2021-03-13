@@ -1,4 +1,4 @@
-package com.app.account;
+package com.app.person;
 
 import java.io.Serializable;
 import javax.persistence.*;

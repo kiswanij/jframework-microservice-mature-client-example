@@ -2,8 +2,8 @@ package com.app;
 
 import java.util.List;
 
-import com.app.account.Model;
-import com.app.account.ServiceClient;
+import com.app.person.Model;
+import com.app.person.ServiceClient;
 import com.jk.util.JK;
 
 public class App {

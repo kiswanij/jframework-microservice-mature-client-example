@@ -1,4 +1,4 @@
-package com.app.account;
+package com.app.person;
 
 import com.jk.web.services.client.JKMatureServiceClient;
 
