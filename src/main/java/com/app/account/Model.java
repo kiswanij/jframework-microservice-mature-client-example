@@ -1,8 +1,8 @@
-package com.app.model;
+package com.app.account;
 
 import com.jk.util.jpa.BaseEntity;
 
-public class Account extends BaseEntity {
+public class Model extends BaseEntity {
 
 	private Integer id;
 
@@ -72,6 +72,6 @@ public class Account extends BaseEntity {
 		if (obj == null) {
 			return false;
 		}
-		return this.getId() == ((Account) obj).getId();
+		return this.getId() == ((Model) obj).getId();
 	}
 }

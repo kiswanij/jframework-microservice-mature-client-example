@@ -1,8 +1,8 @@
-package com.app.model;
+package com.app.account;
 
 import com.jk.web.services.client.JKMatureServiceClient;
 
-public class AccountServiceClient extends JKMatureServiceClient<Account>{
+public class ServiceClient extends JKMatureServiceClient<Model>{
 
 	@Override
 	public String getServiceUrlPropertyName() {
