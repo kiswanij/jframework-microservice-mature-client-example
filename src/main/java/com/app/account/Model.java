@@ -1,18 +1,19 @@
 package com.app.account;
 
-import com.jk.util.jpa.BaseEntity;
+import java.io.Serializable;
+import javax.persistence.*;
 
-public class Model extends BaseEntity {
+public class Model implements Serializable {
 
 	private Integer id;
 
-	private String number;
+	private String nationalId;
 
 	private String name;
 
-	private Double avg;
+	private String email;
 
-	private String phone;
+	private String address;
 
 	public void setId(Integer id) {
 		this.id = id;
@@ -22,12 +23,12 @@ public class Model extends BaseEntity {
 		return this.id;
 	}
 
-	public void setNumber(String number) {
-		this.number = number;
+	public void setNationalId(String nationalId) {
+		this.nationalId = nationalId;
 	}
 
-	public String getNumber() {
-		return this.number;
+	public String getNationalId() {
+		return this.nationalId;
 	}
 
 	public void setName(String name) {
@@ -38,33 +39,20 @@ public class Model extends BaseEntity {
 		return this.name;
 	}
 
-	public void setAvg(Double avg) {
-		this.avg = avg;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public Double getAvg() {
-		return this.avg;
+	public String getEmail() {
+		return this.email;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
-	public String getPhone() {
-		return this.phone;
-	}
-
-	@Override
-	public String toString() {
-		StringBuffer buf = new StringBuffer();
-		buf.append(this.number).append(" ");
-		buf.append(",");
-		buf.append(this.name).append(" ");
-		buf.append(",");
-		buf.append(this.avg).append(" ");
-		buf.append(",");
-		buf.append(this.phone).append(" ");
-		return buf.toString();
+	public String getAddress() {
+		return this.address;
 	}
 
 	@Override
@@ -72,6 +60,25 @@ public class Model extends BaseEntity {
 		if (obj == null) {
 			return false;
 		}
-		return this.getId() == ((Model) obj).getId();
+		return this.getId().equals(((Model) obj).getId());
+	}
+
+	@Override
+	public int hashCode() {
+		if (this.id == null) {
+			return toString().hashCode();
+		}
+		return this.id.hashCode();
+	}
+
+	@Override
+	public String toString() {
+		StringBuffer buf = new StringBuffer();
+		buf.append(this.id).append(",");
+		buf.append(this.nationalId).append(",");
+		buf.append(this.name).append(",");
+		buf.append(this.email).append(",");
+		buf.append(this.address).append(",");
+		return buf.toString();
 	}
 }

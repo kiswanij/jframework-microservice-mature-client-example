@@ -6,7 +6,7 @@ public class ServiceClient extends JKMatureServiceClient<Model>{
 
 	@Override
 	public String getServiceUrlPropertyName() {
-		return "app.services.account.url";
+		return "app.services.persons.url";
 	}
 
 }
