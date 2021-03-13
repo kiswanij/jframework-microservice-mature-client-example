@@ -5,9 +5,11 @@ import java.util.List;
 import com.app.account.Model;
 import com.app.account.ServiceClient;
 import com.jk.util.JK;
+import com.jk.util.JKObjectUtil;
 import com.jk.web.services.client.JKServiceClient;
 
 public class App {
+	private static int id;
 	public static void main(String[] args) {
 		ServiceClient client=new ServiceClient();
 		addRecord(client);
@@ -19,12 +21,12 @@ public class App {
 	}
 
 	private static void delete(ServiceClient client) {
-		client.callJsonWithDelete("/1");		
+		client.callJsonWithDelete("/"+id);		
 	}
 
 	private static void find(ServiceClient client) {
 		// Retrieve single account
-		Model account = client.callSingleJson("/1");
+		Model account = client.callSingleJson("/"+id);
 		JK.printBlock(account);
 	}
 
@@ -34,7 +36,11 @@ public class App {
 		account.setName("Jalal");
 		account.setAvg(100.3);
 		account.setPhone("88888");
-		client.callJsonWithPost(account);
+		String response= client.callJsonWithPost(account);
+		
+		
+		account = JKObjectUtil.jsonToObject(response, Model.class);
+		id=account.getId();//keep the current id for the later calls
 	}
 
 	private static void printAll(ServiceClient client) {
