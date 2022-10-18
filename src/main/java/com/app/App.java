@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.app.person.Model;
 import com.app.person.ServiceClient;
-import com.jk.util.JK;
+import com.jk.core.util.JK;
 
 public class App {
 	private static Model createdAccount;
