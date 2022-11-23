@@ -1,7 +1,6 @@
 package com.app.person;
 
 import java.io.Serializable;
-import javax.persistence.*;
 
 public class Model implements Serializable {
 
