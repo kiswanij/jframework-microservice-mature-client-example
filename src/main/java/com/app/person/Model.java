@@ -1,6 +1,14 @@
 package com.app.person;
 
 import java.io.Serializable;
+import java.util.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
+import jakarta.persistence.Transient;
 
 public class Model implements Serializable {
 
@@ -13,6 +21,8 @@ public class Model implements Serializable {
 	private String email;
 
 	private String address;
+	
+	private Date birthDate; 	
 
 	public void setId(Integer id) {
 		this.id = id;
@@ -80,4 +90,14 @@ public class Model implements Serializable {
 		buf.append(this.address).append(",");
 		return buf.toString();
 	}
+
+	public Date getBirthDate() {
+		return birthDate;
+	}
+
+	public void setBirthDate(Date birthDate) {
+		this.birthDate = birthDate;
+	}
+	
+	
 }

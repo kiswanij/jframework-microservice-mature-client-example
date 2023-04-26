@@ -1,0 +1,7 @@
+{
+	"nationalId": "123456789",
+	"name": "Jalal Kiswani",
+	"email": "kiswanij@gmail.com",
+	"address": "Reno, NV",
+	"birthDate": "28/02/2023 12:12:00"
+}
