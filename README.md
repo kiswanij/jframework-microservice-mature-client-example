@@ -1,8 +1,8 @@
-# JKFramework Mature MicroServie ClientExample
+# JFramework Mature MicroServie ClientExample
 _Last updated: 2022-11-26_
 
 
-This repository contains a _JKFramework-SerivceClient_ that commnicates with a mature microservice
+This repository contains a _JFramework-SerivceClient_ that commnicates with a mature microservice
 
 ## Prerequisites:
 - JDK 17+ Installed
