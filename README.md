@@ -1,5 +1,5 @@
 # JFramework Mature MicroServie ClientExample
-_Last updated: 2022-11-26_
+_Last updated: Aug 20, 2025_
 
 
 This repository contains a _JFramework-SerivceClient_ that commnicates with a mature microservice
